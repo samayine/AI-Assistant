@@ -3,15 +3,12 @@ import json
 import logging
 import os
 import re
-from sys import path
 
 import numpy as np
 import redis
 from bioblend.galaxy import GalaxyInstance
 from dotenv import load_dotenv
 from rapidfuzz import fuzz, process
-
-path.append('.')
 
 from app.llm_handle.llm_models import GeminiModel, gemini_embedding_model
 from app.prompts.galaxy_prompts import (
